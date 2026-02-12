@@ -51,6 +51,7 @@
 
         .buttons {
             display: flex;
+            justify-content: center;
             gap: 16px;
         }
 
@@ -197,22 +198,24 @@
 
         function startGame() {
             card.innerHTML = `
-        <h1>💖 Kemi 💖</h1>
-        <p style="color:#ff4d6d;font-size:18px;">
-Vivement le 14 pour passer un super moment ensemble ❤️
+        <h1>💖Ma valentine Kemi 💖</h1>
+        <p style="color:#ff4d6d;font-size:18px;"
+Vivement le 14 pour passer un super moment ensemble 
         </p>
 
         <div class="game">
             <div class="rules">
-                🎁 <strong>Jeu du cadeau caché</strong><br>
-                Le 14 février, coche ou décoche les étapes au fur et à mesure.
-                Quand tout est coché, le cadeau apparaît 💖
+                <strong style="font-size:18px">🎁 Jeu du cadeau caché</strong><br>
+                <p style="margin-top:10px;">
+                    Le 14 février, coche ou décoche les cases au fur et à mesure.
+                    Quand tout est coché, le cadeau apparaît 💖
+                </p>
             </div>
 
             <div class="checklist">
                 <label>
                     <input type="checkbox" data-id="1">
-                    💌 Petit mot spécial Saint-Valentin
+                    💌 Lettre spéciale Saint-Valentin
                 </label>
                 <label>
                     <input type="checkbox" data-id="2">
