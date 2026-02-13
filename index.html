@@ -167,6 +167,7 @@
 <body>
 
     <div class="card" id="card">
+        <img id="mainGif" src="gifs/heart-love.gif" alt="Animation AgenceDigitals" class="img-fluid">
         <h1> Busy Kemi 💘</h1>
         <div class="subtitle">Veux-tu être ma Valentine ?</div>
 
@@ -176,6 +177,12 @@
         </div>
     </div>
     <script>
+        const gif = document.getElementById("mainGif");
+        let gifList = [
+            "gifs/myaowl.gif",
+            "gifs/myaowl.gif",
+        ];
+
         const card = document.getElementById("card");
         const yesBtn = document.getElementById("yes");
         const noBtn = document.getElementById("no");
@@ -183,7 +190,7 @@
         let noTexts = [
             "Es-tu sûre ? 😶",
             "Vraiment sûre ? 🥺",
-            "Pourquoi tu n'aimes pas les bami ? 💔",
+            "Pourquoi n'aimes-tu pas les bamis? 💔",
             "Je suis triste 😭",
             "Dernière chance 💕"
         ];
@@ -194,15 +201,19 @@
             yesBtn.style.transform = `scale(${scale})`;
 
             noBtn.textContent = noTexts[index % noTexts.length];
+
+            // Changer le GIF
+            gif.src = gifList[index % gifList.length];
             index++;
         });
         document.getElementById("yes").onclick = startGame;
 
         function startGame() {
             card.innerHTML = `
+             <img id="mainGif" src="gifs/cat.gif" alt="Animation AgenceDigitals" class="img-fluid">
         <h1>💖Ma valentine Kemi 💖</h1>
         <p style="color:#ff4d6d;font-size:18px;"
-Vivement le 14 pour passer un super moment ensemble 
+         Vivement le 14 pour passer un super moment ensemble 
         </p>
 
         <div class="game">
